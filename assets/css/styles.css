@@ -474,3 +474,65 @@ body {
   font-size: 18px;
   text-align: center;
 }
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+  .top-bar, .bottom-bar {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .menu-items {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .content-container,
+  .projects-container,
+  .certificates-container,
+  .contact-container {
+    flex-direction: column;
+    padding: 20px;
+    width: 95%;
+  }
+
+  .content-box,
+  .about-box,
+  .project-box,
+  .certificate-box,
+  .platform-box,
+  .contact-box {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .profile-photo-left {
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
+  }
+
+  .Resumeimg img {
+    max-width: 100%;
+  }
+
+  .custom-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  .title {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .top-bar h1 {
+    font-size: 16px;
+  }
+
+  .bottom-bar {
+    font-size: 12px;
+  }
+}

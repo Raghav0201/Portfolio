@@ -2,69 +2,412 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Raghav E - Portfolio</title>
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <script defer src="assets/js/scripts.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Raghav E</title>
+  <meta name="description" content="Raghav E — Frappe developer at Vintrosys Business Solutions, Tiruppur. I work on ERPNext and build web apps with React and Node.js.">
+  <meta name="theme-color" content="#0b0c0e" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f6f5f1" media="(prefers-color-scheme: light)">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Raghav E">
+  <meta property="og:description" content="Frappe developer at Vintrosys, Tiruppur. ERPNext, Python, React and Node.js.">
+  <meta property="og:url" content="https://raghav0201.github.io/Portfolio/">
+  <meta property="og:image" content="https://raghav0201.github.io/Portfolio/assets/img/profile.webp">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0c0e'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial' font-weight='700' font-size='28' fill='%23c8f560'%3ERE%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  <!-- Apply saved theme before paint to avoid a flash -->
+  <script>
+    try { var t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+    document.documentElement.classList.add('js');
+  </script>
+  <script defer src="assets/js/main.js"></script>
 </head>
 <body>
-  <!-- Header -->
-  <header class="top-bar">
-    <div class="logo-container">
-      <!-- Removed LeetCode and GFG links from here -->
-    </div>
-    <h1 class ="title">Welcome to My Portfolio</h1>
+  <!-- Icon sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5V21h-6v-6H9v6H3z"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></symbol>
+    <symbol id="i-work" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"/></symbol>
+    <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="m8.5 14-1.5 7 5-3 5 3-1.5-7"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 21h16"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"/></symbol>
+    <symbol id="i-expand" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+    <symbol id="i-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+    <symbol id="i-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+  </svg>
 
-    <!-- Hamburger Menu -->
-    <div class="trigger">
-      <svg class="bars" viewBox="0 0 100 100" onclick="toggleMenu(this)">
-        <path class="line top" d="m 30,33 h 40 c 13.100415,0 14.380204,31.80258 6.899646,33.421777 -24.612039,5.327373 9.016154,-52.337577 -12.75751,-30.563913 l -28.284272,28.284272"></path>
-        <path class="line middle" d="m 70,50 c 0,0 -32.213436,0 -40,0 -7.786564,0 -6.428571,-4.640244 -6.428571,-8.571429 0,-5.895471 6.073743,-11.783399 12.286435,-5.570707 6.212692,6.212692 28.284272,28.284272 28.284272,28.284272"></path>
-        <path class="line bottom" d="m 69.575405,67.073826 h -40 c -13.100415,0 -14.380204,-31.80258 -6.899646,-33.421777 24.612039,-5.327373 -9.016154,52.337577 12.75751,30.563913 l 28.284272,-28.284272"></path>
-      </svg>
-    </div>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="progress" aria-hidden="true"></div>
 
-    <!-- Hamburger Menu Content -->
-    <nav id="menu" class="menu hidden">
-      <ul class="menu-items">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="certifications.html">Certificate</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <!-- Top bar -->
+  <header class="topbar">
+    <div class="wrap topbar-in">
+      <a class="brand" href="#top" aria-label="Raghav E, back to top">
+        <span class="brand-mark">RE</span>
+        <span class="brand-name">Raghav E</span>
+      </a>
 
-  <!-- Main Content -->
-  <main>
-    <!-- Introduction -->
-    <div class="content-container">
-      <img src="assets/images/profile.jpg" alt="Raghav's Photo" class="profile-photo-left">
+      <nav class="nav" aria-label="Sections">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#work">Projects</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#resume">Résumé</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-      <div class="content-box">
-        <h2 class="name">Hi! It's me <span>Raghav E 👋</span></h2>
-        <p class="intro-text">
-          A Full Stack Developer specializing in the MERN stack, dedicated to building reliable and adaptable web applications. With hands-on experience in MongoDB, Express.js, React, and Node.js, I focus on delivering seamless user experiences and dependable digital solutions.
-        </p>
+      <div class="tools">
+        <span class="clock mono" title="Local time in India"><span class="dot"></span><span data-clock>--:--</span> IST</span>
+        <button class="icon-btn" type="button" data-theme-toggle aria-label="Toggle colour theme">
+          <svg class="i i-sun"><use href="#i-sun"/></svg>
+          <svg class="i i-moon"><use href="#i-moon"/></svg>
+        </button>
       </div>
     </div>
+  </header>
 
-    <!-- Buttons -->
-    <div class="button-container-outside">
-      <button class="custom-button" onclick="location.href='about.html'">More About Me</button>
-      <button class="custom-button" onclick="location.href='Resume.html'">View My Resume</button>
-      <button class="custom-button" onclick="location.href='coding-skills.html'">Coding Skills</button>
-    </div>
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <div class="hero-grid-bg" aria-hidden="true"></div>
+      <div class="wrap hero-in">
+        <div class="hero-copy">
+          <p class="status reveal"><span class="pulse"></span> Frappe Developer Intern at Vintrosys · Tiruppur</p>
+          <h1 class="hero-name reveal">Raghav&nbsp;E<span class="accent">.</span></h1>
+          <p class="hero-line reveal">
+            I help businesses run on <em>ERPNext</em>, and I build web apps with React and Node.js.
+          </p>
+          <p class="hero-sub reveal">
+            I work as a Frappe developer at Vintrosys Business Solutions in Tiruppur, setting up and supporting ERPNext for client companies. Before this I studied Information Technology at Karpagam Institute of Technology, Coimbatore.
+          </p>
+          <div class="hero-cta reveal">
+            <a class="btn btn-primary" href="#work">See my projects <svg class="i"><use href="#i-arrow"/></svg></a>
+          </div>
+
+          <dl class="hero-meta reveal">
+            <div><dt>Now</dt><dd>Vintrosys, Tiruppur</dd></div>
+            <div><dt>Focus</dt><dd>ERPNext · MERN</dd></div>
+            <div><dt>Degree</dt><dd>B.Tech IT, 2026</dd></div>
+          </dl>
+        </div>
+
+        <figure class="portrait reveal">
+          <div class="portrait-frame">
+            <img src="assets/img/profile.webp" width="900" height="1200" alt="Raghav E, smiling, in a beige polo shirt outdoors" fetchpriority="high">
+          </div>
+          <figcaption class="portrait-tag mono">
+            <span>Raghav E</span>
+            <span>Tamil Nadu, India</span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track mono">
+          <span>Frappe</span><span>ERPNext</span><span>Python</span><span>MariaDB</span><span>JavaScript</span><span>React</span><span>Node.js</span><span>Express.js</span><span>MongoDB</span><span>Git</span>
+          <span>Frappe</span><span>ERPNext</span><span>Python</span><span>MariaDB</span><span>JavaScript</span><span>React</span><span>Node.js</span><span>Express.js</span><span>MongoDB</span><span>Git</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 01 About -->
+    <section class="section" id="about" data-section>
+      <div class="wrap">
+        <header class="sec-head reveal">
+          <span class="sec-num mono">01</span>
+          <h2>About</h2>
+          <p class="sec-kicker">A bit about me.</p>
+        </header>
+
+        <div class="bento">
+          <article class="tile tile-intro reveal">
+            <p class="lead">
+              Most of my day goes into <em>ERPNext</em>: setting up modules for clients, fixing what's broken and writing custom code when their process needs it. Outside that, I like building full-stack apps with React and Node.js.
+            </p>
+          </article>
+
+          <article class="tile tile-edu reveal">
+            <h3 class="tile-label mono">Education</h3>
+            <p class="tile-big">B.Tech, Information Technology</p>
+            <p class="muted">Karpagam Institute of Technology, Coimbatore</p>
+            <div class="chips"><span class="chip">2022 – 2026</span><span class="chip">CGPA 7.1</span></div>
+          </article>
+
+          <article class="tile tile-stack reveal">
+            <h3 class="tile-label mono">What I use</h3>
+            <ul class="stack-list">
+              <li><span class="muted mono">ERP</span><span>Frappe · ERPNext</span></li>
+              <li><span class="muted mono">Backend</span><span>Python · Node.js · Express</span></li>
+              <li><span class="muted mono">Frontend</span><span>React · JavaScript · HTML · CSS</span></li>
+              <li><span class="muted mono">Database</span><span>MariaDB · MongoDB</span></li>
+            </ul>
+          </article>
+
+          <article class="tile tile-modules reveal">
+            <h3 class="tile-label mono">ERPNext modules I work in</h3>
+            <div class="chips chips-lg">
+              <span class="chip">Selling</span><span class="chip">Buying</span><span class="chip">CRM</span>
+              <span class="chip">Insights</span><span class="chip">HRMS</span><span class="chip">Manufacturing</span>
+              <span class="chip">Accounts <span class="chip-note">· intermediate</span></span>
+            </div>
+          </article>
+
+          <article class="tile tile-lang reveal">
+            <h3 class="tile-label mono">I speak</h3>
+            <p class="tile-big">Tamil <span class="muted">&amp;</span> English</p>
+            <h3 class="tile-label mono tile-label-gap">I practise C++ on</h3>
+            <div class="mini-links">
+              <a href="https://leetcode.com/u/Raghav_0201/" target="_blank" rel="noopener">LeetCode <svg class="i"><use href="#i-arrow"/></svg></a>
+              <a href="https://www.geeksforgeeks.org/user/raghavel6cav/" target="_blank" rel="noopener">GeeksforGeeks <svg class="i"><use href="#i-arrow"/></svg></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 Experience -->
+    <section class="section" id="experience" data-section>
+      <div class="wrap">
+        <header class="sec-head reveal">
+          <span class="sec-num mono">02</span>
+          <h2>Experience</h2>
+          <p class="sec-kicker">Where I've worked so far.</p>
+        </header>
+
+        <ol class="timeline">
+          <li class="tl-item reveal">
+            <div class="tl-when mono"><span class="now">Current</span>Nov 2025 – Present</div>
+            <div class="tl-card">
+              <h3>Frappe Developer Intern <span class="muted">· Vintrosys Business Solutions, Tiruppur</span></h3>
+              <p class="tl-text">
+                I work on ERPNext for client companies. Most days that means setting up and supporting modules: Selling, Buying, CRM, HRMS, Manufacturing, Insights and Accounts. When a client's process needs something the standard setup can't do, I write Python and JavaScript on the Frappe framework.
+              </p>
+              <div class="challenge">
+                <p class="challenge-label mono">The hardest job so far</p>
+                <p>A food and beverage company had about five years of data in their ERPNext site, and a lot of it had been entered inconsistently. I worked with their team so new entries went in the right way, and I sorted out their accounts across all of that data.</p>
+              </div>
+              <div class="chips"><span class="chip">ERPNext</span><span class="chip">Frappe</span><span class="chip">Accounts</span><span class="chip">Client support</span></div>
+            </div>
+          </li>
+          <li class="tl-item reveal">
+            <div class="tl-when mono">Feb 2024 – Mar 2024</div>
+            <div class="tl-card">
+              <h3>Full-Stack Developer Intern <span class="muted">· ZEN 1 Techpark</span></h3>
+              <p class="tl-text">A 15-day internship in full-stack development: writing code, debugging it and getting it deployed.</p>
+              <div class="chips"><span class="chip">Full stack</span><span class="chip">Debugging</span><span class="chip">Deployment</span></div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 03 Projects -->
+    <section class="section" id="work" data-section>
+      <div class="wrap">
+        <header class="sec-head reveal">
+          <span class="sec-num mono">03</span>
+          <h2>Projects</h2>
+          <p class="sec-kicker">A couple of things I've built.</p>
+        </header>
+
+        <div class="projects">
+          <article class="project reveal">
+            <div class="project-visual" aria-hidden="true">
+              <div class="pv-window">
+                <div class="pv-bar"><i></i><i></i><i></i></div>
+                <div class="pv-body">
+                  <div class="pv-head"><span class="pv-label">Raw material price</span><span class="pv-badge">Buy now</span></div>
+                  <svg class="pv-chart" viewBox="0 0 300 120" preserveAspectRatio="none">
+                    <path class="pv-grid-l" d="M0 30h300M0 60h300M0 90h300"/>
+                    <path class="pv-line" d="M0 90 L40 80 L80 84 L120 62 L160 66 L200 40 L240 46 L270 30"/>
+                    <path class="pv-pred" d="M270 30 L300 22"/>
+                    <circle class="pv-anom" cx="160" cy="66" r="5"/>
+                  </svg>
+                  <div class="pv-stats"><span><b>87–95%</b>accuracy</span><span><b>Buy / Wait</b>advice</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <p class="project-idx mono">College project · built as a team</p>
+              <h3>AI Cost Optimiser for ERPNext</h3>
+              <p>ERP systems are good at storing data, but they don't tell you what to do next. We added machine learning to ERPNext so it can predict raw-material prices, spot unusual price jumps and suggest whether to buy now or wait.</p>
+              <ul class="points">
+                <li>Price predictions with Linear Regression, around 87–95% accurate</li>
+                <li>Isolation Forest to flag abnormal price changes before a risky purchase</li>
+                <li>Supplier ranking by price, quality and delivery</li>
+                <li>A consumer portal with price alerts and “Buy now / Wait” suggestions</li>
+              </ul>
+              <div class="chips"><span class="chip">Python</span><span class="chip">Frappe</span><span class="chip">ERPNext</span><span class="chip">MariaDB</span><span class="chip">scikit-learn</span><span class="chip">Pandas</span></div>
+              <div class="project-links">
+                <a class="link-arrow" href="https://github.com/manikandan-s-18/ai_cost_optimiser/tree/develop" target="_blank" rel="noopener">Source code <svg class="i"><use href="#i-arrow"/></svg></a>
+                <a class="link-arrow" href="https://github.com/manikandan-s-18/ai_cost_optimiser/tree/feat/consumer_portal/consumer_portal" target="_blank" rel="noopener">Consumer portal <svg class="i"><use href="#i-arrow"/></svg></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <div class="project-visual" aria-hidden="true">
+              <div class="pv-window pv-glass">
+                <div class="pv-bar"><i></i><i></i><i></i></div>
+                <div class="pv-body">
+                  <div class="pv-search"></div>
+                  <div class="pv-task done"><span class="pv-check"></span><b></b><span class="pv-date">Mon</span></div>
+                  <div class="pv-task"><span class="pv-check"></span><b></b><span class="pv-date">Wed</span></div>
+                  <div class="pv-task"><span class="pv-check"></span><b class="s"></b><span class="pv-date">Fri</span></div>
+                  <div class="pv-share"><span class="pv-avatar"></span><span class="pv-avatar"></span>Shared</div>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <p class="project-idx mono">Personal project · MERN</p>
+              <h3>Task Manager</h3>
+              <p>A task app where you sign in with Google, break tasks into checklists, set due dates and share a task with someone by email. I gave it a macOS-style glass look.</p>
+              <ul class="points">
+                <li>Google OAuth 2.0 sign-in</li>
+                <li>Create, edit and delete tasks, with sub-tasks and due dates</li>
+                <li>Share tasks through an email invitation link</li>
+                <li>Search by title, deployed on Render</li>
+              </ul>
+              <div class="chips"><span class="chip">React</span><span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">MongoDB</span><span class="chip">OAuth 2.0</span><span class="chip">Render</span></div>
+              <div class="project-links">
+                <a class="link-arrow" href="https://github.com/Raghav0201/task-manager-app" target="_blank" rel="noopener">Source code <svg class="i"><use href="#i-arrow"/></svg></a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 Certificates -->
+    <section class="section" id="certificates" data-section>
+      <div class="wrap">
+        <header class="sec-head reveal">
+          <span class="sec-num mono">04</span>
+          <h2>Certificates</h2>
+          <p class="sec-kicker">Tap one to see the certificate.</p>
+        </header>
+
+        <div class="certs">
+          <button type="button" class="cert reveal" data-cert data-src="assets/img/certs/aws.webp" data-title="AWS Academy Cloud Foundations" data-meta="AWS Academy · 2024">
+            <span class="cert-img"><img src="assets/img/certs/aws.webp" width="1080" height="803" alt="" loading="lazy"></span>
+            <span class="cert-text"><span class="cert-issuer mono">AWS Academy</span><strong>Cloud Foundations</strong><span class="muted mono">2024</span></span>
+          </button>
+          <button type="button" class="cert reveal" data-cert data-src="assets/img/certs/oracle.webp" data-title="OCI 2023 AI Certified Foundations Associate" data-meta="Oracle University · May 2024">
+            <span class="cert-img"><img src="assets/img/certs/oracle.webp" width="795" height="551" alt="" loading="lazy"></span>
+            <span class="cert-text"><span class="cert-issuer mono">Oracle University</span><strong>OCI AI Foundations Associate</strong><span class="muted mono">May 2024</span></span>
+          </button>
+          <button type="button" class="cert reveal" data-cert data-src="assets/img/certs/cpp.webp" data-title="AZ101: Master C++ for Competitive Coding" data-meta="AlgoZenith · Aug 2024">
+            <span class="cert-img"><img src="assets/img/certs/cpp.webp" width="932" height="529" alt="" loading="lazy"></span>
+            <span class="cert-text"><span class="cert-issuer mono">AlgoZenith</span><strong>Master C++ for Competitive Coding</strong><span class="muted mono">Aug 2024</span></span>
+          </button>
+          <button type="button" class="cert reveal" data-cert data-src="assets/img/certs/time-complexity.webp" data-title="Time Complexity Series" data-meta="AlgoZenith · Jan 2025">
+            <span class="cert-img"><img src="assets/img/certs/time-complexity.webp" width="923" height="649" alt="" loading="lazy"></span>
+            <span class="cert-text"><span class="cert-issuer mono">AlgoZenith</span><strong>Time Complexity Series</strong><span class="muted mono">Jan 2025</span></span>
+          </button>
+          <button type="button" class="cert reveal" data-cert data-src="assets/img/certs/ux-trust.webp" data-title="Building Trust Through UX Design" data-meta="LinkedIn Learning · Nov 2024">
+            <span class="cert-img"><img src="assets/img/certs/ux-trust.webp" width="1080" height="820" alt="" loading="lazy"></span>
+            <span class="cert-text"><span class="cert-issuer mono">LinkedIn Learning</span><strong>Building Trust Through UX Design</strong><span class="muted mono">Nov 2024</span></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 Résumé -->
+    <section class="section" id="resume" data-section>
+      <div class="wrap">
+        <header class="sec-head reveal">
+          <span class="sec-num mono">05</span>
+          <h2>Résumé</h2>
+          <p class="sec-kicker">The one-page version.</p>
+        </header>
+
+        <div class="resume reveal">
+          <button type="button" class="resume-preview" data-resume aria-label="Open full résumé">
+            <img src="assets/img/resume.webp" width="1428" height="2021" alt="Preview of Raghav E's résumé" loading="lazy">
+            <span class="resume-open mono"><svg class="i"><use href="#i-expand"/></svg> Open full view</span>
+          </button>
+          <div class="resume-side">
+            <ul class="facts">
+              <li><span class="fact-n">7</span><span class="muted">ERPNext modules</span></li>
+              <li><span class="fact-n">2</span><span class="muted">projects</span></li>
+              <li><span class="fact-n">2</span><span class="muted">internships</span></li>
+              <li><span class="fact-n">5</span><span class="muted">certificates</span></li>
+            </ul>
+            <div class="resume-actions">
+              <a class="btn btn-primary" href="assets/Raghav-E-Resume.pdf" download>Download résumé <svg class="i"><use href="#i-down"/></svg></a>
+              <button class="btn" type="button" data-resume>View full size <svg class="i"><use href="#i-expand"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 Contact -->
+    <section class="section section-contact" id="contact" data-section>
+      <div class="wrap">
+        <header class="sec-head reveal">
+          <span class="sec-num mono">06</span>
+          <h2>Contact</h2>
+          <p class="sec-kicker">Email is the quickest way to reach me.</p>
+        </header>
+
+        <div class="contact reveal">
+          <p class="contact-big">Want to work together? Say <em>hello.</em></p>
+          <p class="contact-note muted">If you have a role in mind or an ERPNext question, send me an email. I usually reply within a day.</p>
+          <div class="email-row">
+            <a class="email-link" href="mailto:raghavelumalai@gmail.com">raghavelumalai@gmail.com</a>
+            <button class="btn btn-primary" type="button" data-copy="raghavelumalai@gmail.com"><svg class="i"><use href="#i-copy"/></svg> Copy email</button>
+          </div>
+
+          <ul class="links">
+            <li><a href="https://www.linkedin.com/in/raghav-elumalai-17668626b" target="_blank" rel="noopener"><span class="mono muted">01</span><span>LinkedIn</span><span class="muted link-handle">raghav-elumalai</span><svg class="i"><use href="#i-arrow"/></svg></a></li>
+            <li><a href="https://github.com/Raghav0201" target="_blank" rel="noopener"><span class="mono muted">02</span><span>GitHub</span><span class="muted link-handle">Raghav0201</span><svg class="i"><use href="#i-arrow"/></svg></a></li>
+            <li><a href="https://wa.me/916369398220" target="_blank" rel="noopener"><span class="mono muted">03</span><span>WhatsApp</span><span class="muted link-handle">+91 63693 98220</span><svg class="i"><use href="#i-arrow"/></svg></a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
   </main>
 
-<!-- Footer -->
-<footer class="small-footer">
-  <div class="bottom-bar">
-    <p class="Rights">© 2023 Raghav E. All Rights Reserved.</p>
-  </div>
-</footer>
+  <footer class="footer">
+    <div class="wrap footer-in">
+      <p class="muted">© <span data-year>2026</span> Raghav E · Tiruppur, Tamil Nadu</p>
+      <a class="muted" href="#top">Back to top ↑</a>
+    </div>
+  </footer>
 
+  <!-- Mobile dock -->
+  <nav class="dock" aria-label="Quick navigation">
+    <a href="#top" data-dock="top"><svg class="i"><use href="#i-home"/></svg><span>Home</span></a>
+    <a href="#about" data-dock="about"><svg class="i"><use href="#i-user"/></svg><span>About</span></a>
+    <a href="#work" data-dock="work"><svg class="i"><use href="#i-work"/></svg><span>Projects</span></a>
+    <a href="#certificates" data-dock="certificates"><svg class="i"><use href="#i-award"/></svg><span>Certs</span></a>
+    <a href="#contact" data-dock="contact"><svg class="i"><use href="#i-mail"/></svg><span>Contact</span></a>
+  </nav>
 
-  <script src="assets/js/scripts.js"></script>
+  <!-- Lightbox -->
+  <dialog class="lightbox" id="lightbox" aria-label="Image viewer">
+    <div class="lb-top">
+      <div class="lb-caption"><strong data-lb-title></strong><span class="muted mono" data-lb-meta></span></div>
+      <button class="icon-btn" type="button" data-lb-close aria-label="Close viewer"><svg class="i"><use href="#i-x"/></svg></button>
+    </div>
+    <div class="lb-stage">
+      <button class="icon-btn lb-nav lb-prev" type="button" data-lb-prev aria-label="Previous"><svg class="i"><use href="#i-left"/></svg></button>
+      <img data-lb-img alt="">
+      <button class="icon-btn lb-nav lb-next" type="button" data-lb-next aria-label="Next"><svg class="i"><use href="#i-right"/></svg></button>
+    </div>
+    <p class="lb-count mono muted" data-lb-count></p>
+  </dialog>
+
+  <div class="toast mono" role="status" aria-live="polite" data-toast></div>
 </body>
 </html>

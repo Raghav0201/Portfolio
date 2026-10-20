@@ -135,7 +135,7 @@
     });
   }
 
-  /* ---------- 8. Image viewer: certificates + résumé ---------- */
+  /* ---------- 8. Image viewer: certificates + resume ---------- */
   const lb = $('#lightbox');
   const lbImg = $('[data-lb-img]', lb);
   const lbTitle = $('[data-lb-title]', lb);
@@ -163,7 +163,7 @@
     lbMode = 'doc';
     lb.classList.add('is-doc');
     lbImg.src = 'assets/img/resume.webp';
-    lbImg.alt = "Raghav E's résumé";
+    lbImg.alt = "Raghav E's resume";
     lbTitle.textContent = 'Raghav-E-Resume.pdf';
     lbMeta.textContent = 'Scroll to read';
     lb.showModal();
